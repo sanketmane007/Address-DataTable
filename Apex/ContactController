@@ -8,14 +8,4 @@ public class ContactController {
             }
             return null;
     }
-
-     @AuraEnabled(cacheable=true)
-    public static List<Contact> getContactRecord2 (){
-            List<Contact> lstCOn = [SELECT Id,Name,FirstName,LastName,Email,AddressCompare__c FROM Contact WHERE  ];
-
-            if(!lstcon.isEmpty()){
-                return lstCOn;
-            }
-            return null;
-    }
 }
