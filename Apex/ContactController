@@ -1,0 +1,21 @@
+public class ContactController {
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> getContactRecords (){
+            List<Contact> lstCOn = [SELECT Id,Name,FirstName,LastName,Email,AddressCompare__c FROM Contact WHERE AddressCompare__c = 'Address match'];
+
+            if(!lstcon.isEmpty()){
+                return lstCOn;
+            }
+            return null;
+    }
+
+     @AuraEnabled(cacheable=true)
+    public static List<Contact> getContactRecord2 (){
+            List<Contact> lstCOn = [SELECT Id,Name,FirstName,LastName,Email,AddressCompare__c FROM Contact WHERE  ];
+
+            if(!lstcon.isEmpty()){
+                return lstCOn;
+            }
+            return null;
+    }
+}
